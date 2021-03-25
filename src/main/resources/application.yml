@@ -1,0 +1,25 @@
+micronaut:
+  application:
+    name: myapp
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 1234
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
+jpa.default.properties.hibernate.hbm2ddl.auto: create-drop
+
+grpc:
+  client:
+    plaintext: true
+    max-retry-attempts: 10
+  channels:
+    keyManager:
+      address: http://localhost:50051
+      plaintext: true
+      max-retry-attempts: 10
+jackson:
+  serialization:
+    writeDatesAsTimestamps: false
