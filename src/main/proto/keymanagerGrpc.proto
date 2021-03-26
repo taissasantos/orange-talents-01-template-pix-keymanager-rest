@@ -78,6 +78,7 @@ message CarregaChavePixRequest{
 }
 
 message CarregaChavePixResponse{
+
   message ChavePix{
 
     message ContaInfo{
